@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f0e8;
+}
+
+html {
+  --color-bg-light: #f5f0e8;
+  --color-bg-dark: #0f1419;
+  --color-mint: #a8d5b5;
+  --color-blush: #f7c5d0;
+  --color-butter: #fdeea3;
+}
+
+html.dark {
+  color-scheme: dark;
+  --color-bg-light: #0f1419;
+  --color-bg-dark: #1a202c;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg-light);
+  transition: background-color 0.3s ease;
+}
+
+html.dark body {
+  background: var(--color-bg-dark);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(247, 197, 208, 0.4);
+}
