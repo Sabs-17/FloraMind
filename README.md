@@ -18,7 +18,7 @@ Um chatbot inteligente e interativo focado em botânica e cuidados com plantas, 
 
 ### ✨ Principais Características
 
-- 🤖 **Chatbot Inteligente** - Powered by Google's Generative AI (Gemini)
+- 🤖 **Chatbot Inteligente** - Powered by  Groq API
 - 🎨 **Interface Moderna** - Design responsivo e intuitivo com TailwindCSS
 - 📱 **Multiplataforma** - Funciona em desktop e mobile
 - 💬 **Sugestões Inteligentes** - Recomendações contextuais baseadas em conversas anteriores
@@ -54,8 +54,8 @@ FloraMind/
 
 - **Node.js** v18 ou superior
 - **npm** ou **yarn**
-- **Chave da API GROQ**)
-
+- **Chave da API Groq** - [Obtenha aqui](https://console.groq.com/)
+- 
 ### Instalação Rápida
 
 1. **Clone o repositório**
@@ -74,7 +74,7 @@ npm install
 # Copie o arquivo de exemplo e configure com sua chave
 cp .env.example .env
 
-# Edite .env e adicione sua chave da Google AI Studio
+# Edite .env e adicione sua chave da API Groq
 # GROQ_KEY=sua_chave_aqui
 
 npm run dev
