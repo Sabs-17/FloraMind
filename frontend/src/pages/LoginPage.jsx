@@ -15,7 +15,7 @@ export default function LoginPage() {
       return;
     }
     login(name.trim());
-    navigate('/');
+    navigate('/', { replace: true });
   };
 
   return (

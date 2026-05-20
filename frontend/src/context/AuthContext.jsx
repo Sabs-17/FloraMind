@@ -1,14 +1,20 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-const AuthContext = createContext(null);
+const AuthContext = createContext({
+  user: null,
+  login: () => {},
+  logout: () => {}
+});
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const stored = localStorage.getItem('floramind_user');
-    if (stored) setUser(JSON.parse(stored));
-  }, []);
+  const [user, setUser] = useState(() => {
+    try {
+      const stored = localStorage.getItem('floramind_user');
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
+    }
+  });
 
   const login = (name) => {
     const payload = { name };
